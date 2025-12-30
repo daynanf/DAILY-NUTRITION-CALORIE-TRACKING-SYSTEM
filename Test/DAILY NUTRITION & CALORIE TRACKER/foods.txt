@@ -1,0 +1,537 @@
+foodname|calories|protein|carbohydrates|fat|servingsize
+injera (pure teff)|101|3.9|22.0|0.7|100g
+injera (mixed teff/wheat)|115|4.2|25.0|1.1|100g
+doro wat (standard)|250|22.0|12.0|14.0|200g
+doro wat (spicy/berbere)|265|21.5|15.0|15.0|200g
+doro wat (egg only)|155|12.6|1.2|10.6|100g
+misir wat (red lentils)|145|9.0|21.0|3.5|150g
+misir alicha (yellow lentils)|135|8.5|22.0|2.5|150g
+shiro wat (thick)|160|7.0|20.0|6.0|150g
+shiro wat (liquid/feses)|120|5.0|15.0|4.0|150g
+tegamino shiro|190|9.0|22.0|8.5|150g
+kik alicha (split peas)|130|8.5|22.0|2.0|150g
+gomen (collard greens)|60|3.0|8.0|2.5|150g
+gomen besiga (beef & greens)|220|18.0|5.0|14.0|200g
+tikil gomen (cabbage)|75|2.0|12.0|3.0|150g
+fosolia (green beans)|85|2.5|14.0|3.5|150g
+key wat (beef stew spicy)|290|24.0|11.0|17.0|200g
+alicha wat (beef stew mild)|260|24.0|8.0|15.0|200g
+minchet abish (spicy beef)|310|28.0|6.0|20.0|200g
+minchet abish (mild beef)|295|28.5|5.0|18.0|200g
+kitfo (raw)|350|30.0|2.0|25.0|150g
+kitfo (lebleb/medium)|360|29.0|2.0|26.0|150g
+kitfo (yebesh/cooked)|370|28.0|2.0|27.5|150g
+tibs (beef sautéed)|320|32.0|4.0|20.0|200g
+tibs (lamb/yebeg)|340|28.0|2.0|24.0|200g
+derek tibs (crispy beef)|350|34.0|2.0|24.0|200g
+shekla tibs|330|31.0|3.5|21.0|200g
+awaze tibs|345|30.0|8.0|22.0|200g
+zilzil tibs|325|33.0|1.5|21.0|200g
+firfir (injera pieces)|210|6.0|38.0|4.5|200g
+quanta firfir (dried beef)|280|18.0|35.0|8.0|200g
+bulla (enset porridge)|150|1.2|35.0|0.2|100g
+genfo (barley porridge)|160|4.5|32.0|2.0|100g
+chechebsa (spicy)|340|7.0|45.0|15.0|150g
+chechebsa (with honey)|365|6.5|52.0|15.5|150g
+fatira (pancake with egg)|290|12.0|35.0|12.0|150g
+kolo (roasted barley)|420|11.0|75.0|9.0|100g
+nifro (boiled chickpeas)|180|9.0|32.0|2.0|100g
+nifro (boiled wheat)|190|6.5|40.0|1.5|100g
+ayib (cottage cheese)|100|12.0|3.0|4.5|100g
+dulet (minced tripe/liver)|220|24.0|4.0|12.0|150g
+assawat (fish stew)|180|22.0|6.0|7.5|200g
+fried fish (nile perch)|230|26.0|0.0|14.0|150g
+azifa (lentil salad)|140|8.0|22.0|2.5|150g
+timatim selata (tomato salad)|45|1.2|7.0|2.0|150g
+buticha (chickpea dip)|170|8.0|14.0|10.0|100g
+besso (barley flour drink)|190|6.0|38.0|2.0|100g
+telba (flaxseed drink)|210|7.5|12.0|16.0|100ml
+birz (honey water)|85|0.2|22.0|0.1|200ml
+tej (honey wine)|160|0.5|28.0|0.1|150ml
+talla (traditional beer)|120|1.2|15.0|0.0|300ml
+shai (ethiopian tea spicy)|5|0.0|1.2|0.0|200ml
+buna (traditional coffee)|2|0.2|0.0|0.0|50ml
+macchiato (standard)|80|4.0|9.0|3.5|150ml
+dabo (homemade bread)|260|8.0|52.0|3.5|100g
+ambasha (celebration bread)|275|7.5|55.0|4.0|100g
+sambusa (meat)|180|9.0|18.0|8.0|1pc
+sambusa (lentil)|150|6.0|22.0|5.0|1pc
+kurt (raw beef cubes)|250|26.0|0.0|16.0|100g
+beyaynetu (vegetarian platter)|550|22.0|85.0|18.0|500g
+dinich wat (potato stew)|120|2.5|24.0|2.5|150g
+shurba (vegetable soup)|90|2.0|15.0|3.0|200ml
+pasta selata (ethiopian style)|160|4.5|28.0|4.0|150g
+rice with vegetables|140|3.0|30.0|1.2|150g
+egg firfir|240|14.0|22.0|11.0|150g
+ful medames (ethiopian style)|185|12.0|28.0|4.5|150g
+honey (pure)|304|0.3|82.0|0.0|100g
+berbere spice mix|315|14.0|48.0|12.0|100g
+niter kibbeh (spiced butter)|880|0.3|0.0|99.0|100g
+mitmita spice|300|12.0|45.0|10.0|100g
+orange (local)|47|0.9|11.8|0.1|100g
+mango (local)|60|0.8|15.0|0.4|100g
+papaya (local)|43|0.5|11.0|0.3|100g
+avocado (local)|160|2.0|8.5|14.7|100g
+banana (local)|89|1.1|22.8|0.3|100g
+guava|68|2.6|14.0|1.0|100g
+lemon/lomi|30|1.1|9.0|0.3|100g
+garlic|149|6.4|33.0|0.5|100g
+ginger|80|1.8|18.0|0.8|100g
+red onion|40|1.1|9.3|0.1|100g
+green chili/karia|40|2.0|9.0|0.4|100g
+peanuts (roasted)|567|25.8|16.1|49.2|100g
+sunflower seeds (roasted)|584|20.8|20.0|51.5|100g
+sesame seeds|573|17.7|23.5|49.7|100g
+lentils (raw dry)|352|24.6|63.4|1.1|100g
+chickpeas (raw dry)|364|19.3|60.7|6.0|100g
+white beans (raw dry)|333|23.4|60.0|0.8|100g
+barley (raw dry)|354|12.5|73.5|2.3|100g
+sorghum (raw dry)|339|11.3|74.6|3.3|100g
+millet (raw dry)|378|11.0|72.8|4.2|100g
+corn/maize (boiled)|100|3.2|21.0|1.5|100g
+sweet potato (boiled)|86|1.6|20.1|0.1|100g
+carrot (boiled)|35|0.8|8.0|0.2|100g
+cabbage (raw)|25|1.3|5.8|0.1|100g
+tomato (raw)|18|0.9|3.9|0.2|100g
+spinach (boiled)|23|3.0|3.6|0.4|100g
+beef (lean grilled)|250|26.0|0.0|15.0|100g
+chicken (skinless roasted)|165|31.0|0.0|3.6|100g
+lamb (roasted)|290|25.0|0.0|21.0|100g
+goat meat (stewed)|143|27.0|0.0|3.0|100g
+whole milk (local)|61|3.2|4.8|3.3|100ml
+yogurt (plain)|60|3.5|4.7|3.3|100g
+spaghetti bolognese|297|14.0|35.0|11.0|250g
+fettuccine Alfredo|415|11.0|38.0|24.0|250g
+lasagna (beef)|336|19.0|28.0|16.0|250g
+penne arrabbiata|180|6.0|34.0|2.5|200g
+margherita pizza|250|10.0|30.0|10.0|100g
+pepperoni pizza|298|12.0|28.0|15.0|100g
+veggie supreme pizza|215|8.0|32.0|7.0|100g
+risotto (mushroom)|135|3.5|24.0|3.0|150g
+gnocchi (potato)|130|3.0|28.0|0.5|100g
+minestrone soup|82|3.5|12.0|2.0|200g
+bruschetta (tomato)|155|4.0|22.0|6.0|100g
+tacos (beef)|226|15.0|18.0|11.0|150g
+chicken enchilada|165|12.0|16.0|6.0|150g
+burrito (bean and cheese)|210|8.0|32.0|6.0|180g
+guacamole|160|2.0|8.5|14.7|100g
+quesadilla (cheese)|320|14.0|26.0|18.0|150g
+fajitas (chicken)|190|22.0|12.0|6.0|200g
+nachos with cheese|306|8.0|34.0|16.0|100g
+chili con carne|155|12.0|13.0|6.0|200g
+sushi (salmon nigiri)|140|6.0|24.0|2.0|100g
+sushi (california roll)|120|3.5|22.0|2.0|100g
+miso soup|40|3.0|5.0|1.0|200ml
+chicken teriyaki|180|24.0|15.0|2.5|150g
+beef yakiniku|250|22.0|4.0|16.0|150g
+tempura shrimp|280|12.0|24.0|15.0|100g
+ramen (pork tonkotsu)|450|18.0|50.0|20.0|400ml
+pad thai (shrimp)|190|10.0|32.0|2.5|150g
+green curry (chicken)|160|14.0|8.0|8.0|200g
+tom yum soup|90|8.0|6.0|4.0|250ml
+som tum (papaya salad)|60|2.0|12.0|0.5|150g
+kung pao chicken|185|18.0|12.0|7.5|150g
+sweet and sour pork|240|15.0|22.0|10.0|150g
+dim sum (shrimp dumpling)|50|4.0|8.0|0.5|1pc
+spring roll (vegetable)|120|2.0|18.0|4.5|1pc
+chow mein (chicken)|175|12.0|24.0|3.5|150g
+peking duck|330|18.0|2.0|28.0|100g
+butter chicken|240|16.0|10.0|15.0|200g
+chicken tikka masala|190|18.0|9.0|9.0|200g
+lamb rogan josh|210|22.0|8.0|10.0|200g
+palak paneer|160|8.0|9.0|10.5|150g
+dal makhani|145|7.0|18.0|5.0|150g
+naan bread|290|9.0|50.0|6.0|100g
+garlic naan|310|9.5|52.0|7.5|100g
+vegetable samosa|150|3.0|22.0|5.5|1pc
+hummus|166|8.0|14.0|9.0|100g
+falafel|330|13.0|32.0|18.0|100g
+tabbouleh salad|150|3.0|18.0|8.0|150g
+shawarma (chicken)|220|24.0|15.0|7.0|150g
+baba ghanoush|115|1.5|9.0|8.5|100g
+moussaka (eggplant)|145|9.0|12.0|7.5|150g
+gyro (lamb/beef)|250|18.0|20.0|11.0|150g
+spanakopita|280|8.0|24.0|17.0|100g
+greek salad|105|4.0|6.0|8.0|200g
+souvlaki (pork)|160|24.0|2.0|6.0|100g
+baklava|430|5.0|52.0|24.0|100g
+croissant (plain)|406|8.0|45.0|21.0|100g
+baguette|248|9.0|52.0|1.0|100g
+quiche lorraine|300|12.0|22.0|18.0|150g
+ratatouille|65|1.5|10.0|2.5|150g
+beef bourguignon|165|22.0|6.0|5.5|200g
+coq au vin|155|24.0|4.0|4.5|200g
+paella (seafood)|175|12.0|28.0|1.5|150g
+tortilla espanola|160|6.0|14.0|9.0|100g
+gazpacho|45|1.0|8.0|1.5|200ml
+wiener schnitzel|260|22.0|18.0|11.0|150g
+bratwurst (grilled)|297|12.0|2.0|26.0|100g
+sauerkraut|19|1.0|4.0|0.1|100g
+pretzel (soft)|310|9.0|65.0|2.0|100g
+fish and chips|230|15.0|22.0|10.0|200g
+shepherds pie|155|14.0|15.0|4.0|200g
+beef stew (irish style)|110|12.0|10.0|2.5|200g
+yorkshire pudding|250|8.0|35.0|8.5|100g
+hamburger (standard)|250|13.0|30.0|9.0|1pc
+cheeseburger|300|15.0|31.0|13.0|1pc
+hot dog (beef)|290|10.0|20.0|19.0|1pc
+caesar salad|190|6.0|10.0|14.0|150g
+macaroni and cheese|165|7.0|22.0|5.5|150g
+buffalo chicken wings|290|22.0|1.0|22.0|100g
+cornbread|280|6.0|45.0|8.5|100g
+pancakes (buttermilk)|225|6.0|38.0|5.0|100g
+waffles (plain)|290|7.0|40.0|11.0|100g
+beef jerky|410|33.0|11.0|25.0|100g
+poutine|240|8.0|28.0|11.0|150g
+pierogi (cheese)|200|7.0|34.0|4.5|100g
+borscht soup|45|1.5|9.0|0.5|200ml
+beef stroganoff|185|18.0|12.0|7.0|200g
+kebab (lamb)|220|24.0|2.0|13.0|100g
+doner kebab|230|18.0|15.0|11.0|150g
+kofte (beef)|240|22.0|6.0|14.0|150g
+lahmacun|190|9.0|24.0|6.5|150g
+pide (cheese)|260|12.0|32.0|9.0|150g
+lentil soup (turkish)|95|7.0|14.0|1.5|200ml
+dolma (stuffed leaves)|150|4.0|22.0|5.0|100g
+bibimbap|145|8.0|22.0|3.0|200g
+kimchi|15|1.0|2.5|0.5|100g
+bulgogi (beef)|190|22.0|12.0|6.0|150g
+korean fried chicken|320|24.0|20.0|16.0|150g
+japchae|155|3.0|32.0|1.5|150g
+pho (beef soup)|90|8.0|12.0|1.0|300ml
+banh mi (pork)|210|11.0|32.0|4.5|180g
+summer rolls (fresh)|75|4.0|12.0|1.0|1pc
+nasi goreng|175|7.0|28.0|4.0|150g
+satay (chicken)|210|24.0|4.0|11.0|100g
+gado gado|130|6.0|12.0|6.5|150g
+feijoada (black bean stew)|165|14.0|15.0|5.5|200g
+pao de queijo|310|6.0|38.0|15.0|100g
+churrasco (beef)|240|28.0|0.0|14.0|100g
+coxinha (chicken snack)|280|12.0|30.0|12.0|100g
+empanada (beef)|290|11.0|32.0|13.0|1pc
+ceviche (shrimp)|95|15.0|6.0|1.0|150g
+lomo saltado|180|18.0|18.0|4.0|200g
+arepa (corn cake)|220|4.0|38.0|5.5|100g
+pabellon criollo|175|14.0|22.0|3.5|200g
+bunny chow (curry bread)|220|12.0|34.0|4.0|200g
+biltong|250|50.0|2.0|5.0|100g
+bobotie|185|14.0|15.0|7.5|150g
+jollof rice|190|5.0|38.0|2.0|150g
+egusi soup|210|18.0|8.0|12.0|200g
+pounded yam|120|1.5|28.0|0.1|100g
+suya (beef stick)|240|28.0|4.0|12.0|100g
+fried plantain|250|1.5|48.0|6.0|100g
+couscous (cooked)|112|3.8|23.0|0.2|100g
+tagine (lamb with prunes)|165|14.0|18.0|4.0|200g
+harira soup|95|6.0|15.0|1.5|200ml
+pastilla (chicken pie)|290|15.0|34.0|11.0|150g
+fufu (cassava)|110|1.0|26.0|0.2|100g
+waakye (rice and beans)|170|7.0|34.0|0.5|150g
+banku|125|2.0|28.0|0.2|100g
+nyama choma (goat)|145|27.0|0.0|4.0|100g
+ugali|110|2.5|24.0|0.5|100g
+matoke (green banana)|90|1.2|22.0|0.2|100g
+shakshouka|120|8.0|10.0|5.5|200g
+koshary|155|6.0|30.0|1.0|150g
+falafel (egyptian taameya)|280|11.0|28.0|14.0|100g
+meatloaf (beef)|210|16.0|10.0|11.0|150g
+pot roast|145|22.0|4.0|4.5|150g
+fried chicken drumstick|260|24.0|7.0|15.0|100g
+tater tots|200|2.0|25.0|10.0|100g
+corn on the cob|106|3.4|21.0|1.5|100g
+baked beans (canned)|95|5.0|21.0|0.5|100g
+cole slaw|150|1.0|12.0|11.0|100g
+potato salad|140|2.0|16.0|7.5|100g
+apple pie|237|2.0|34.0|11.0|100g
+chocolate brownie|460|5.0|52.0|26.0|100g
+cheesecake (plain)|321|5.5|25.0|22.0|100g
+blue cheese dressing|440|2.0|6.0|46.0|100ml
+ranch dressing|430|1.0|7.0|44.0|100ml
+mayonnaise|680|1.0|1.0|75.0|100ml
+ketchup|100|1.0|26.0|0.1|100ml
+yellow mustard|66|4.0|8.0|3.0|100ml
+soy sauce|53|8.0|5.0|0.5|100ml
+sriracha sauce|100|2.0|18.0|1.0|100ml
+olive tapenade|230|1.5|6.0|22.0|100g
+pesto sauce|450|5.0|6.0|45.0|100g
+hummus (roasted pepper)|160|7.5|15.0|8.0|100g
+tzatziki|54|3.5|3.5|3.0|100g
+white rice (long grain)|130|2.7|28.2|0.3|158g
+brown rice (cooked)|111|2.6|23.0|0.9|100g
+wild rice (cooked)|101|4.0|21.0|0.3|100g
+quinoa (cooked)|120|4.4|21.3|1.9|100g
+buckwheat (cooked)|92|3.4|20.0|0.6|100g
+couscous (whole wheat)|112|4.0|23.0|0.2|100g
+bulgur (cooked)|83|3.0|18.5|0.2|100g
+polenta (cooked)|70|2.0|15.0|0.1|100g
+oat bran (cooked)|40|2.3|11.5|0.8|100g
+muesli (dry)|340|10.0|65.0|4.5|100g
+cornflakes|357|7.0|84.0|0.4|100g
+granola (with nuts)|470|10.0|60.0|21.0|100g
+whole wheat bread|247|13.2|41.3|4.2|64g
+rye bread|259|8.5|48.0|3.3|100g
+sourdough bread|289|12.0|56.0|1.5|100g
+pumpernickel bread|250|9.0|48.0|3.0|100g
+challah bread|280|9.0|52.0|4.0|100g
+corn tortilla|218|5.7|45.0|2.9|100g
+flour tortilla|310|8.0|50.0|8.5|100g
+pita bread|275|9.0|55.0|1.2|100g
+bagel (plain)|250|10.0|48.0|1.5|100g
+english muffin|235|8.0|45.0|1.0|100g
+croissant (butter)|406|8.0|45.0|21.0|100g
+danish pastry|370|5.0|48.0|18.0|100g
+muffin (blueberry)|377|4.5|55.0|16.0|100g
+scone (plain)|360|6.0|52.0|14.0|100g
+pancakes (plain)|227|6.4|28.0|10.0|100g
+french toast|230|8.0|25.0|11.0|100g
+crepe (plain)|160|6.0|20.0|6.0|100g
+paratha (plain)|320|6.0|42.0|14.0|100g
+poori|350|7.0|45.0|16.0|100g
+chapati|260|8.0|52.0|3.5|100g
+arepa (white corn)|220|4.0|38.0|5.5|100g
+beef brisket (smoked)|240|26.0|0.0|15.0|100g
+beef ribs (bbq)|310|20.0|8.0|22.0|100g
+pork chops (grilled)|210|26.0|0.0|11.0|100g
+pork loin (roasted)|242|27.0|0.0|14.0|100g
+bacon (crispy)|541|37.0|1.4|42.0|100g
+ham (honey roasted)|145|21.0|4.0|5.0|100g
+lamb shank (braised)|180|22.0|0.0|10.0|150g
+duck breast (seared)|200|19.0|0.0|14.0|100g
+turkey ground (lean)|150|24.0|0.0|6.0|100g
+chicken wings (baked)|200|18.0|0.0|14.0|100g
+chicken thigh (with skin)|210|20.0|0.0|14.0|100g
+chicken nuggets|300|15.0|18.0|18.0|100g
+cod (baked)|82|18.0|0.0|0.7|100g
+tuna (fresh yellowfin)|108|24.0|0.0|1.0|100g
+shrimp (boiled)|99|24.0|0.2|0.3|100g
+lobster (steamed)|89|19.0|0.0|0.9|100g
+crab meat (steamed)|97|19.0|0.0|1.5|100g
+mussels (steamed)|86|12.0|3.5|2.2|100g
+scallops (seared)|110|20.0|5.0|1.0|100g
+squid (calamari fried)|175|18.0|8.0|7.5|100g
+salmon (smoked)|117|18.0|0.0|4.5|100g
+tofu (firm)|80|8.0|2.0|4.5|100g
+tempeh|190|19.0|9.0|11.0|100g
+seitan|370|75.0|14.0|2.0|100g
+edamame (in pod)|120|11.0|10.0|5.0|100g
+cheddar cheese|403|25.0|1.3|33.0|100g
+mozzarella cheese|300|22.0|2.0|22.0|100g
+parmesan cheese|431|38.0|4.0|28.0|100g
+feta cheese|264|14.0|4.0|21.0|100g
+swiss cheese|380|27.0|1.5|28.0|100g
+brie cheese|334|20.0|0.5|28.0|100g
+gouda cheese|356|25.0|2.2|27.0|100g
+blue cheese|353|21.0|2.3|29.0|100g
+ricotta cheese|174|11.0|3.0|13.0|100g
+cream cheese|342|6.0|4.0|34.0|100g
+greek yogurt (full fat)|97|9.0|4.0|5.0|100g
+greek yogurt (non fat)|59|10.0|3.6|0.4|100g
+cottage cheese (low fat)|80|12.0|3.0|2.0|100g
+whole milk|61|3.2|4.8|3.3|100ml
+skim milk|34|3.4|5.0|0.1|100ml
+soy milk (unsweetened)|33|2.8|1.8|1.6|100ml
+almond milk (unsweetened)|13|0.4|0.3|1.1|100ml
+oat milk|45|1.0|7.0|1.5|100ml
+coconut milk (canned)|197|2.0|3.0|21.0|100ml
+heavy cream|340|2.0|3.0|36.0|100ml
+sour cream|193|2.0|4.5|19.0|100g
+butter (salted)|717|0.8|0.1|81.0|100g
+ghee|880|0.0|0.0|99.5|100g
+margarine|717|0.2|0.7|81.0|100g
+ice cream (vanilla)|207|3.5|24.0|11.0|100g
+sorbet (lemon)|130|0.0|32.0|0.0|100g
+apple|52|0.3|13.8|0.2|182g
+banana|89|1.1|22.8|0.3|118g
+orange|47|0.9|11.8|0.1|131g
+strawberries|32|0.7|7.7|0.3|100g
+blueberries|57|0.7|14.5|0.3|100g
+grapes|69|0.7|18.0|0.2|100g
+watermelon|30|0.6|7.5|0.1|100g
+pineapple|50|0.5|13.0|0.1|100g
+mango|60|0.8|15.0|0.4|100g
+peaches|39|0.9|9.5|0.3|100g
+pears|57|0.4|15.0|0.1|100g
+kiwi|61|1.1|15.0|0.5|100g
+raspberries|52|1.2|12.0|0.6|100g
+cherries|63|1.1|16.0|0.2|100g
+plums|46|0.7|11.4|0.3|100g
+apricots|48|1.4|11.0|0.4|100g
+pomegranate|83|1.7|18.7|1.2|100g
+figs (fresh)|74|0.8|19.0|0.3|100g
+dates (dried)|280|2.5|75.0|0.4|100g
+raisins|299|3.0|79.0|0.5|100g
+prunes|240|2.2|64.0|0.4|100g
+cranberries (dried)|308|0.1|82.0|1.4|100g
+broccoli (raw)|34|2.8|7.0|0.4|91g
+cauliflower (raw)|25|1.9|5.0|0.3|100g
+spinach (raw)|23|2.9|3.6|0.4|100g
+kale (raw)|49|4.3|8.8|0.9|100g
+carrots (raw)|41|0.9|9.6|0.2|100g
+celery (raw)|16|0.7|3.0|0.2|100g
+cucumber (raw)|15|0.7|3.6|0.1|100g
+bell pepper (red)|31|1.0|6.0|0.3|100g
+zucchini (raw)|17|1.2|3.1|0.3|100g
+eggplant (raw)|25|1.0|6.0|0.2|100g
+asparagus (raw)|20|2.2|3.9|0.1|100g
+green beans (raw)|31|1.8|7.0|0.1|100g
+peas (green boiled)|81|5.4|14.4|0.4|100g
+corn (sweet yellow)|86|3.2|19.0|1.2|100g
+potatoes (boiled)|77|2.0|17.5|0.1|100g
+sweet potato (baked)|86|1.6|20.1|0.1|100g
+onion (raw)|40|1.1|9.3|0.1|100g
+garlic (raw)|149|6.4|33.0|0.5|100g
+ginger (raw)|80|1.8|18.0|0.8|100g
+mushrooms (white)|22|3.1|3.3|0.3|100g
+tomatoes (raw)|18|0.9|3.9|0.2|100g
+avocado|160|2.0|8.5|14.7|100g
+brussels sprouts|43|3.4|9.0|0.3|100g
+beets (boiled)|43|1.6|10.0|0.2|100g
+radishes|16|0.7|3.4|0.1|100g
+cabbage (raw)|25|1.3|5.8|0.1|100g
+lettuce (iceberg)|14|0.9|3.0|0.1|100g
+lettuce (romaine)|17|1.2|3.3|0.3|100g
+arugula|25|2.6|3.7|0.7|100g
+pumpkin (raw)|26|1.0|6.5|0.1|100g
+butternut squash|45|1.0|11.7|0.1|100g
+almonds (raw)|579|21.2|21.6|49.9|100g
+walnuts|654|15.2|13.7|65.2|100g
+cashews (raw)|553|18.2|30.2|43.8|100g
+pistachios (raw)|562|20.2|27.5|45.4|100g
+peanuts (raw)|567|25.8|16.1|49.2|100g
+pecans|691|9.2|13.9|72.0|100g
+hazelnuts|628|15.0|16.7|60.8|100g
+macadamia nuts|718|7.9|13.8|75.8|100g
+brazil nuts|656|14.3|12.3|66.4|100g
+pumpkin seeds|559|30.2|10.7|49.1|100g
+sunflower seeds|584|20.8|20.0|51.5|100g
+sesame seeds|573|17.7|23.5|49.7|100g
+chia seeds|486|16.5|42.1|30.7|100g
+flaxseeds|534|18.3|28.9|42.2|100g
+peanut butter|588|25.0|20.0|50.0|100g
+almond butter|614|21.0|19.0|55.0|100g
+tahini|595|17.0|21.0|53.0|100g
+hazelnut cocoa spread|539|6.0|57.0|31.0|100g
+olive oil|884|0.0|0.0|100.0|100ml
+coconut oil|862|0.0|0.0|100.0|100ml
+canola oil|884|0.0|0.0|100.0|100ml
+sesame oil|884|0.0|0.0|100.0|100ml
+honey|304|0.3|82.0|0.0|100g
+maple syrup|260|0.0|67.0|0.1|100g
+brown sugar|380|0.0|98.0|0.0|100g
+white sugar|387|0.0|100.0|0.0|100g
+dark chocolate (70%)|598|7.8|45.9|42.6|100g
+milk chocolate|535|7.7|59.4|29.7|100g
+white chocolate|539|5.9|59.2|32.1|100g
+coffee (black)|1|0.1|0.0|0.0|100ml
+tea (black plain)|1|0.0|0.2|0.0|100ml
+green tea|1|0.2|0.0|0.0|100ml
+orange juice (fresh)|45|0.7|10.4|0.2|100ml
+apple juice|46|0.1|11.3|0.1|100ml
+cola soda|38|0.0|10.0|0.0|100ml
+lemon lime soda|37|0.0|9.0|0.0|100ml
+tonic water|34|0.0|9.0|0.0|100ml
+beer (lager)|43|0.5|3.5|0.0|100ml
+wine (red)|85|0.1|2.6|0.0|100ml
+wine (white)|82|0.1|2.6|0.0|100ml
+vodka (80 proof)|231|0.0|0.0|0.0|100ml
+whiskey|250|0.0|0.1|0.0|100ml
+gin|263|0.0|0.0|0.0|100ml
+rum|231|0.0|0.0|0.0|100ml
+tequila|231|0.0|0.0|0.0|100ml
+sparkling water|0|0.0|0.0|0.0|100ml
+coconut water|19|0.7|3.7|0.2|100ml
+energy drink|45|0.0|11.0|0.0|100ml
+sport drink|25|0.0|6.0|0.0|100ml
+hard boiled egg|155|12.6|1.1|10.6|100g
+scrambled egg|148|10.0|1.6|11.0|100g
+omelette (plain)|154|11.0|0.6|12.0|100g
+poached egg|143|12.5|0.7|10.0|100g
+fried egg|196|13.6|0.8|15.3|100g
+egg white (raw)|52|11.0|0.7|0.2|100g
+egg yolk (raw)|322|15.9|3.6|26.5|100g
+quail egg|158|13.0|0.4|11.0|100g
+tofu (silken)|47|4.8|1.9|2.7|100g
+lentils (cooked)|116|9.0|20.0|0.4|100g
+chickpeas (cooked)|164|8.9|27.0|2.6|100g
+black beans (cooked)|132|8.9|23.7|0.5|100g
+kidney beans (cooked)|127|8.7|22.8|0.5|100g
+lima beans (cooked)|115|7.8|20.9|0.4|100g
+navy beans (cooked)|140|8.2|26.0|0.6|100g
+pinto beans (cooked)|143|9.0|26.2|0.6|100g
+soybeans (cooked)|173|16.6|9.9|9.0|100g
+falafel (deep fried)|333|13.3|31.8|17.8|100g
+hummus (plain)|166|7.9|14.3|9.6|100g
+tahini (pure)|595|17.0|21.0|53.0|100g
+almonds (roasted salted)|598|21.0|22.0|52.0|100g
+cashews (roasted salted)|574|15.0|32.0|46.0|100g
+pistachios (roasted salted)|562|20.0|28.0|45.0|100g
+peanuts (roasted salted)|585|24.0|21.0|50.0|100g
+popcorn (air popped)|387|13.0|78.0|5.0|100g
+popcorn (butter/salted)|500|9.0|55.0|28.0|100g
+potato chips|536|7.0|53.0|35.0|100g
+tortilla chips|490|7.0|65.0|23.0|100g
+pretzels (hard)|380|10.0|80.0|3.0|100g
+crackers (saltine)|420|9.0|74.0|11.0|100g
+rice cakes (plain)|387|8.0|82.0|3.0|100g
+beef bouillon|7|0.5|0.5|0.4|100ml
+chicken bouillon|6|0.4|0.6|0.3|100ml
+vegetable bouillon|5|0.2|0.8|0.1|100ml
+gelatin (dry powder)|335|85.0|0.0|0.0|100g
+protein powder (whey)|390|80.0|5.0|6.0|100g
+protein powder (soy)|370|85.0|2.0|1.5|100g
+protein powder (pea)|380|75.0|6.0|8.0|100g
+yeast (bakers dry)|325|40.0|40.0|7.0|100g
+vinegar (distilled)|18|0.0|0.0|0.0|100ml
+vinegar (apple cider)|21|0.0|0.9|0.0|100ml
+vinegar (balsamic)|88|0.5|17.0|0.0|100ml
+salt (table)|0|0.0|0.0|0.0|100g
+black pepper|250|10.0|64.0|3.0|100g
+cinnamon (ground)|247|4.0|80.0|1.2|100g
+turmeric (ground)|312|7.8|65.0|10.0|100g
+cumin (ground)|375|18.0|44.0|22.0|100g
+paprika|282|14.0|54.0|13.0|100g
+chili powder|282|13.0|50.0|14.0|100g
+oregano (dried)|265|9.0|69.0|4.3|100g
+basil (dried)|233|23.0|48.0|4.1|100g
+thyme (dried)|276|9.0|64.0|7.4|100g
+rosemary (dried)|331|5.0|64.0|15.0|100g
+parsley (dried)|292|26.0|52.0|5.5|100g
+coriander (ground)|298|12.0|55.0|18.0|100g
+curry powder|325|14.0|58.0|14.0|100g
+cloves (ground)|274|6.0|65.0|13.0|100g
+nutmeg (ground)|525|6.0|49.0|36.0|100g
+cardamom (ground)|311|11.0|68.0|6.7|100g
+bay leaf (dried)|313|7.6|75.0|8.4|100g
+cayenne pepper|318|12.0|56.0|17.0|100g
+onion powder|341|10.0|79.0|1.0|100g
+garlic powder|331|16.0|73.0|0.7|100g
+mustard seed|508|26.0|28.0|36.0|100g
+fennel seed|345|16.0|52.0|15.0|100g
+poppy seed|525|18.0|28.0|42.0|100g
+pumpkin pie spice|340|6.0|65.0|12.0|100g
+vanilla extract|288|0.1|12.7|0.1|100ml
+cocoa powder (unsweetened)|228|20.0|58.0|14.0|100g
+baking powder|53|0.0|28.0|0.0|100g
+baking soda|0|0.0|0.0|0.0|100g
+cornstarch|381|0.3|91.0|0.1|100g
+wheat flour (all purpose)|364|10.0|76.0|1.0|100g
+wheat flour (whole wheat)|339|13.0|72.0|1.9|100g
+bread flour|361|12.0|71.0|1.5|100g
+cake flour|362|8.0|79.0|0.8|100g
+pastry flour|353|10.0|75.0|1.2|100g
+rye flour|338|10.0|76.0|1.8|100g
+barley flour|345|10.0|74.0|1.6|100g
+oat flour|400|14.0|66.0|7.0|100g
+corn flour|361|7.0|77.0|3.8|100g
+rice flour (white)|366|6.0|80.0|1.4|100g
+rice flour (brown)|363|7.0|76.0|2.8|100g
+tapioca flour|358|0.2|88.0|0.0|100g
+almond flour|571|21.0|20.0|50.0|100g
+coconut flour|443|18.0|60.0|15.0|100g
+chickpea flour (besan)|387|22.0|58.0|6.7|100g
+buckwheat flour|335|12.0|71.0|3.1|100g
+spelt flour|342|14.0|70.0|2.5|100g
+quinoa flour|390|14.0|64.0|6.0|100g
+millet flour|378|11.0|73.0|4.2|100g
+sorghum flour|339|11.0|75.0|3.3|100g
+teff flour|367|13.0|73.0|2.4|100g

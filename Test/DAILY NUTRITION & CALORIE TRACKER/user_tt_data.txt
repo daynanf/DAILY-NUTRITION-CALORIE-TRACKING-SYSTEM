@@ -1,0 +1,15 @@
+USER_PROFILE
+Name: tt
+Age: 21
+Gender: Male
+Height: 160
+Weight: 65
+Activity_Level: Sedentary
+Daily_Calorie_Target: 1860
+
+DAILY_LOG
+Date: 2025-12-28
+Type: Custom
+ | 3000 | 36500 | 2400 | 65400 | 200
+END_DAILY_LOG
+
