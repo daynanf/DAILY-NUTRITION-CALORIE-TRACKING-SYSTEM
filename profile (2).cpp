@@ -1,5 +1,6 @@
 #include "profile.h"
 #include "utils.h"      // getValidInt, getValidDouble, pauseConsole
+#include "models.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -21,79 +22,7 @@ static void writeProfileBlock(std::ostream& out, const UserProfile& p) {
     out << "\n";
 }
 
-// 1. Collect profile – back/restart only at the end
-UserProfile collectProfileFromUser() {
-    UserProfile p;
-
-    std::cout << "\n--- Create Profile ---\n";
-    std::cout << "Fill all fields. After summary you can save, restart, or back to main menu.\n\n";
-
-    p.fullName = getNonEmptyString("Full name: ");
-
-    getValidInt(p.age, 1, 120);
-
-    p.gender = getNonEmptyString("Gender (Male/Female): ");
-
-    getValidDouble(p.height_cm, 50.0, 250.0);
-
-    getValidDouble(p.weight_kg, 20.0, 300.0);
-
-    // Activity level (menu)
-    std::cout << "\nActivity level:\n";
-    std::cout << "1. Sedentary\n2. Lightly Active\n3. Moderately Active\n4. Very Active\n";
-    int lvl;
-    while (true) {
-        std::cout << "Choose (1-4): ";
-        if (std::cin >> lvl && lvl >= 1 && lvl <= 4) {
-            std::cin.ignore();
-            break;
-        }
-        std::cin.clear();
-        std::cin.ignore();
-        std::cout << "Invalid choice. Enter 1-4.\n";
-    }
-    switch (lvl) {
-        case 1: p.activityLevel = "Sedentary"; break;
-        case 2: p.activityLevel = "Lightly Active"; break;
-        case 3: p.activityLevel = "Moderately Active"; break;
-        case 4: p.activityLevel = "Very Active"; break;
-        default: p.activityLevel = "Sedentary";
-    }
-
-    calcMacroTargets(p);
-
-    // Summary + final choice (back/restart here)
-    std::cout << "\nYou entered:\n";
-    displayProfile(p);
-
-    std::cout << "\nWhat would you like to do?\n";
-    std::cout << " y = save & finish\n";
-    std::cout << " r = restart from beginning\n";
-    std::cout << " b = back to main menu (cancel)\n";
-    std::cout << "Choice: ";
-
-    std::string answer;
-    std::getline(std::cin, answer);
-    std::string lower = answer;
-    for (char& c : lower) c = std::tolower(c);
-
-    if (lower == "b" || lower == "back") {
-        std::cout << "Cancelled — returning to main menu.\n";
-        p.fullName = "";  // mark as cancelled
-        return p;
-    }
-
-    if (lower == "r" || lower == "restart") {
-        std::cout << "Restarting...\n";
-        return collectProfileFromUser();
-    }
-
-    // Default to save (y or anything else)
-    std::cout << "Profile saved.\n";
-    return p;
-}
-
-// 2. Calculate targets (unchanged)
+// Calculate targets (unchanged)
 double calcBMR(const UserProfile& p) {
     if (p.gender == "Male" || p.gender == "male") {
         return 10.0 * p.weight_kg + 6.25 * p.height_cm - 5.0 * p.age + 5.0;
@@ -120,7 +49,7 @@ void calcMacroTargets(UserProfile& p) {
     p.targetFat_g = std::round((p.dailyCaloriesTarget * 0.25) / 9.0);
 }
 
-// 3. Display targets
+//  Display targets
 void displayNutritionTargets(const UserProfile& p) {
     std::cout << "\nYour Daily Nutrition Targets:\n";
     std::cout << "Calories:     " << static_cast<int>(p.dailyCaloriesTarget) << " kcal\n";
@@ -130,7 +59,7 @@ void displayNutritionTargets(const UserProfile& p) {
     pauseConsole();
 }
 
-// 4. Display full profile (menu case '1')
+//  Display full profile (menu case '1')
 void displayProfile(const UserProfile& p) {
     if (p.fullName.empty()) {
         std::cout << "No profile loaded yet.\n";
@@ -150,7 +79,7 @@ void displayProfile(const UserProfile& p) {
     pauseConsole();
 }
 
-// 5. Create per-user file & write profile
+//  Create per-user file & write profile
 void createUserDataFile(const std::string& filename, const UserProfile& p) {
     std::ofstream fout(filename);
     if (!fout) {
@@ -165,7 +94,7 @@ void createUserDataFile(const std::string& filename, const UserProfile& p) {
     pauseConsole();
 }
 
-// 6. Load profile from file
+//  Load profile from file
 void loadProfileFromFile(const std::string& filename, UserProfile& p) {
     std::ifstream fin(filename);
     if (!fin) {
@@ -203,7 +132,7 @@ void loadProfileFromFile(const std::string& filename, UserProfile& p) {
     calcMacroTargets(p);
 }
 
-// 7. Update weight & save – back option added
+//  Update weight & save – back option added
 void updateWeightAndTargets(const std::string& filename, UserProfile& p) {
     std::cout << "\n--- Update Weight ---\n";
     std::cout << "Current weight: " << p.weight_kg << " kg\n";
