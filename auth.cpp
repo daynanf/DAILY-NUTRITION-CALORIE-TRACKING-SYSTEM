@@ -494,7 +494,7 @@ bool loginUser( UserProfile& profile,char choice)
 }
 bool authentication(UserProfile& profile)
 {
-	// firstWellcomePage();
+	firstWellcomePage();
 	char choice;
     cin >> choice;
 	cin.ignore(numeric_limits<streamsize>::max(), '\n'); // clear leftover newline
