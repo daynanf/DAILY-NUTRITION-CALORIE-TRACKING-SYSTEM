@@ -85,6 +85,7 @@ int main() {
                     case '8':
                         loggedIn = false;
                         cout << "Logging out...\n";
+                        system("cls");
                         break;
                     default:
                         cout << "Invalid Option!\n";
