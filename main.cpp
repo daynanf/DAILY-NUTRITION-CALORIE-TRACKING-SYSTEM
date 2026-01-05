@@ -38,10 +38,6 @@ int main() {
     setupConsole();
     
     while(true) {
-        firstWellcomePage();
-        char choice;
-        cin >> choice;
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         
         UserProfile currentUser;
         bool loggedIn = false;
