@@ -3,16 +3,17 @@
 
 #include <string>
 #include <vector>
-
+using namespace std;
 // Structure for User Profile
 struct UserProfile {
-    std::string username;           // Added for linking to files
-    std::string fullName;
+    string username;           // Added for linking to files
+    string fullName;
+    string password;
     int age = 0;
-    std::string gender;             // "Male" or "Female"
+    string gender;             // "Male" or "Female"
     int height_cm = 0;
     double weight_kg = 0.0;
-    std::string activityLevel;      // "Sedentary", "Lightly Active", etc.
+    string activityLevel;      // "Sedentary", "Lightly Active", etc.
     
     // Calculated Targets
     double dailyCaloriesTarget = 0.0;
@@ -23,7 +24,7 @@ struct UserProfile {
 
 // Structure for Food Item
 struct FoodItem {
-    std::string name;
+    string name;
     double calories = 0.0;
     double protein = 0.0;
     double carbs = 0.0;
@@ -33,8 +34,8 @@ struct FoodItem {
 
 // Structure to track daily totals
 struct DailyLog {
-    std::string date;
-    std::vector<std::pair<FoodItem, double>> consumedMeals; // FoodItem + quantity consumed in grams
+    string date;
+    vector<pair<FoodItem, double>> consumedMeals; // FoodItem + quantity consumed in grams
     
     double totalCalories = 0.0;
     double totalProtein = 0.0;

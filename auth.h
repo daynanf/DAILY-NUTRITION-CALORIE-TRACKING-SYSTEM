@@ -5,16 +5,16 @@
 #include <string>
 using namespace std;
 
-struct UserAccount {
-    string username;
-    string password;
-    string fullName;
-    int age;
-    string gender;
-    int height;
-    int weight;
-    string activityLevel;
-};
+// struct UserAccount {
+//     string username;
+//     string password;
+//     string fullName;
+//     int age;
+//     string gender;
+//     int height;
+//     int weight;
+//     string activityLevel;
+// };
 
 //First Welcome Page
 void firstWellcomePage();
@@ -31,7 +31,7 @@ void getValidActivityLevel(string &activityLevel);
 
 // User flow functions
 void registerUser(char choice);
-void loginUser(char choice);
-void authentication();
+bool loginUser(char choice);
+bool authentication(UserProfile &profile);
 
 #endif

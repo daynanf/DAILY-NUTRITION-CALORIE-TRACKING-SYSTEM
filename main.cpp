@@ -57,21 +57,22 @@ int main() {
         UserProfile currentUser;
         bool loggedIn = false;
         
-        switch(choice) {
-            case '1':
-                registerUser();
-                break;
-            case '2':
-                loggedIn = loginUser(currentUser);
-                break;
-            case '3':
-                cout << "\nGoodbye! 👋\n";
-                return 0;
-            default:
-                cout << "\nInvalid choice. Try again.\n";
-                pauseConsole();
-                continue;
-        }
+        // switch(choice) {
+        //     case '1':
+        //         registerUser();
+        //         break;
+        //     case '2':
+        //         loggedIn = loginUser(currentUser);
+        //         break;
+        //     case '3':
+        //         cout << "\nGoodbye! 👋\n";
+        //         return 0;
+        //     default:
+        //         cout << "\nInvalid choice. Try again.\n";
+        //         pauseConsole();
+        //         continue;
+        // }
+        loggedIn = authentication(currentUser);
         
         if (loggedIn) {
             // Dashboard Loop

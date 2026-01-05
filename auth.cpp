@@ -1,6 +1,7 @@
 #include "auth.h"
 #include "profile.h"
 #include "utils.h"
+#include "models.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -352,7 +353,7 @@ void getValidHeight(int &height) {
 }
 
 // Function to safely get a valid weight (in kg)
-void getValidWeight(int &weight) {
+void getValidWeight( double &weight) {
     while (true) {
         cout << "\n\nEnter Weight (kg): ";
         cin >> weight;
@@ -425,7 +426,7 @@ void getValidActivityLevel(string &activityLevel)
 
 void registerUser(char choice)
 {
-	UserAccount ua;
+	UserProfile ua;
 	cout << "\n--- Register New User ---\n";
 	
 	    getValidUsername(ua.username,choice);
@@ -438,9 +439,9 @@ void registerUser(char choice)
 		
 		getValidGender(ua.gender);
 		
-		getValidHeight(ua.height);
+		getValidHeight(ua.height_cm);
 	
-		getValidWeight(ua.weight);
+		getValidWeight(ua.weight_kg);
 		
 		getValidActivityLevel(ua.activityLevel);
 
@@ -457,8 +458,8 @@ void registerUser(char choice)
              << ua.fullName << "|"
              << ua.age << "|"
              << ua.gender << "|"
-             << ua.height << "|"
-             << ua.weight << "|"
+             << ua.height_cm << "|"
+             << ua.weight_kg << "|"
              <<ua.activityLevel<<"\n";
         file.close();
 
@@ -467,14 +468,14 @@ void registerUser(char choice)
              << "--------------------------------------------\n\n";
 }
 
-void loginUser(char choice)
+bool loginUser(char choice)
 {
 	cout << "\n--- Login ---\n";
 	    string inputUsername, inputPassword;
 	
 	    getValidUsername(inputUsername, choice);
 	    getValidPassword(inputPassword, inputUsername, choice);
-	
+
 	    cout << "\n\nLogin successful! \n";
 	    cout << "Welcome back, 👤 " << inputUsername << "!\n\n";
 	    cout << "👉 Press Enter to continue.....";
@@ -483,8 +484,9 @@ void loginUser(char choice)
 		
 		// Clear screen and show welcome
 	    system("cls"); 
+        return true;
 }
-void authentication()
+bool authentication()
 {
 	firstWellcomePage();
 	char choice;
