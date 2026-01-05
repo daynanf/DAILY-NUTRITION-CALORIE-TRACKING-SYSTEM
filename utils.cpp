@@ -20,18 +20,23 @@ void pauseConsole() {
 
 void printHeader(const string& title, const string& subtitle) {
     clearScreen();
-    cout << "\n";
-    cout << "╔═════════════════════════════════════════════════════════════════════════════╗\n";
-    
-    // Simple centering logic could be added here, for now just printing
-    // Padding manually for simplicity or using tabs
-    if (!subtitle.empty()) {
-        cout << "║ " << title << " - " << subtitle << "\n";
-    } else {
-        cout << "║ " << title << "\n";
-    }
-    
-    cout << "╚═════════════════════════════════════════════════════════════════════════════╝\n\n";
+    const int width = 77;
+    string top = "╔═════════════════════════════════════════════════════════════════════════════╗";
+    string bot = "╚═════════════════════════════════════════════════════════════════════════════╝";
+
+    cout << "\n" << top << "\n";
+
+    // Helper to center a line
+    auto printCentered = [&](const string& s) {
+        int pad = (width - (int)s.size()) / 2;
+        if (pad < 0) pad = 0;
+        cout << "║" << string(pad, ' ') << s << string(max(0, width - pad - (int)s.size()), ' ') << "║\n";
+    };
+
+    printCentered(title);
+    if (!subtitle.empty()) printCentered("- " + subtitle + " -");
+
+    cout << bot << "\n\n";
 }
 
 string toLower(const string& str) {

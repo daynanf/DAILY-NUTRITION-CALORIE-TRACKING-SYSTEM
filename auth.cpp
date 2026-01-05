@@ -13,7 +13,7 @@ void firstWellcomePage()
     system("cls");
 	cout << "\n"
      << "╔═══════════════════════════════════════════════════════════════════════╗\n"
-     << "║ 🍏💪  WELCOME TO THE DAILY NUTRITION & CALORIE TRACKER  💪🍏 ║\n"
+     << "║ 🍏💪  WELCOME TO THE DAILY NUTRITION & CALORIE TRACKER  💪🍏        ║\n"
      << "╚═══════════════════════════════════════════════════════════════════════╝\n\n"
      << " 🆕  1. Register New User\n"
      << " 🔑  2. Login\n"
@@ -446,8 +446,8 @@ void getValidActivityLevel(string &activityLevel)
 void registerUser(char choice)
 {
 	UserProfile ua;
-	cout << "\n--- Register New User ---\n";
 	
+        printHeader("REGISTER NEW USER");
 	    getValidUsername(ua.username,choice);
 
 		getValidPassword(ua.password, ua.username, choice);
@@ -495,7 +495,7 @@ void registerUser(char choice)
 bool loginUser( UserProfile& profile,char choice)
 {   
     system("cls");
-	cout << "\n--- Login ---\n";
+    printHeader("LOGIN");
 	    string inputUsername, inputPassword;
 	
 	    getValidUsername(inputUsername, choice);

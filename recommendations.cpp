@@ -238,8 +238,7 @@ void runMealRecommendations(const UserProfile& p) {
     }
     
     while(true) {
-        clearScreen();
-        cout << "=== REAL-TIME MEAL RECOMMENDATIONS ===\n";
+        printHeader("REAL-TIME MEAL RECOMMENDATIONS");
 
         // 1. Calculate Status
         NutrientStatus consumed = getConsumedToday(p.username);
@@ -249,12 +248,12 @@ void runMealRecommendations(const UserProfile& p) {
         double remCarb = p.targetCarbs_g - consumed.carbs;
         double remFat = p.targetFat_g - consumed.fat;
 
-        cout << "Remaining Today:\n";
-        cout << "Calories: " << (int) max(0.0, remCal) << " kcal\n";
-        cout << "Protein: " << (int) max(0.0, remProt) << " g\n";
-        cout << "Carbs: " << (int) max(0.0, remCarb) << " g\n";
-        cout << "Fat: " << (int) max(0.0, remFat) << " g\n";
+        cout << left << setw(20) << "Remaining Today:";
         cout << "\n";
+        cout << left << setw(12) << "Calories:" << right << setw(6) << (int)max(0.0, remCal) << " kcal\n";
+        cout << left << setw(12) << "Protein:" << right << setw(6) << (int)max(0.0, remProt) << " g\n";
+        cout << left << setw(12) << "Carbs:" << right << setw(6) << (int)max(0.0, remCarb) << " g\n";
+        cout << left << setw(12) << "Fat:" << right << setw(6) << (int)max(0.0, remFat) << " g\n\n";
 
         cout << "Choose a recommendation:\n";
         cout << "A) Protein-focused meal\n";

@@ -13,3 +13,9 @@ Date: 2026-01-05
 Type: Breakfast
 doro wat (egg only) | 534.8 | 43.5 | 4.1 | 36.6 | 345.0
 END_DAILY_LOG
+
+DAILY_LOG
+Date: 2026-01-06
+Type: Breakfast
+cornbread | 1680.0 | 36.0 | 270.0 | 51.0 | 600.0
+END_DAILY_LOG

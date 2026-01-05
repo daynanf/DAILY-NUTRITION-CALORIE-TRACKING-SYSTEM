@@ -51,11 +51,11 @@ void calcMacroTargets(UserProfile& p) {
 
 //  Display targets
 void displayNutritionTargets(const UserProfile& p) {
-    std::cout << "\nYour Daily Nutrition Targets:\n";
-    std::cout << "Calories:     " << static_cast<int>(p.dailyCaloriesTarget) << " kcal\n";
-    std::cout << "Protein:      " << static_cast<int>(p.targetProtein_g) << " g\n";
-    std::cout << "Carbohydrates:" << static_cast<int>(p.targetCarbs_g) << " g\n";
-    std::cout << "Fat:          " << static_cast<int>(p.targetFat_g) << " g\n\n";
+    printHeader("DAILY NUTRITION TARGETS");
+    std::cout << left << setw(18) << "Calories:" << right << setw(6) << static_cast<int>(p.dailyCaloriesTarget) << " kcal\n";
+    std::cout << left << setw(18) << "Protein:" << right << setw(6) << static_cast<int>(p.targetProtein_g) << " g\n";
+    std::cout << left << setw(18) << "Carbohydrates:" << right << setw(6) << static_cast<int>(p.targetCarbs_g) << " g\n";
+    std::cout << left << setw(18) << "Fat:" << right << setw(6) << static_cast<int>(p.targetFat_g) << " g\n\n";
     pauseConsole();
 }
 
@@ -67,14 +67,16 @@ void displayProfile(const UserProfile& p) {
         return;
     }
 
-    std::cout << "\n--- My Profile ---\n";
-    std::cout << "Username      : " << p.username << "\n";
-    std::cout << "Full Name     : " << p.fullName << "\n";
-    std::cout << "Age           : " << p.age << " years\n";
-    std::cout << "Gender        : " << p.gender << "\n";
-    std::cout << "Height        : " << p.height_cm << " cm\n";
-    std::cout << "Weight        : " << p.weight_kg << " kg\n";
-    std::cout << "Activity Level: " << p.activityLevel << "\n\n";
+    printHeader("MY PROFILE");
+    const int labelWidth = 18;
+    const int valueStartCol = 2; // single space after label
+    std::cout << left << setw(labelWidth) << "Username:" << string(valueStartCol, ' ') << p.username << "\n";
+    std::cout << left << setw(labelWidth) << "Full Name:" << string(valueStartCol, ' ') << p.fullName << "\n";
+    std::cout << left << setw(labelWidth) << "Age:" << string(valueStartCol, ' ') << p.age << " years\n";
+    std::cout << left << setw(labelWidth) << "Gender:" << string(valueStartCol, ' ') << p.gender << "\n";
+    std::cout << left << setw(labelWidth) << "Height:" << string(valueStartCol, ' ') << p.height_cm << " cm\n";
+    std::cout << left << setw(labelWidth) << "Weight:" << string(valueStartCol, ' ') << p.weight_kg << " kg\n";
+    std::cout << left << setw(labelWidth) << "Activity Level:" << string(valueStartCol, ' ') << p.activityLevel << "\n\n";
 
     pauseConsole();
 }

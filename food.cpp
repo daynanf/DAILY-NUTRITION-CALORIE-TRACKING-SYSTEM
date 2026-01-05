@@ -261,10 +261,8 @@ void saveToDailyLog(const string& filename, const DailyLog& entry) {
 /* -------------------- Add Custom Food -------------------- */
 
 void runAddCustomFood(const UserProfile& p) {
-    system("cls");
+    printHeader("ADD CUSTOM FOOD");
     FoodItem newFood;
-    
-    cout << "\n=== Add Custom Food ===" << endl;
     
     string input;
     cout << "Enter food name (or 'b' to go back): ";
@@ -335,7 +333,7 @@ void runAddFood(const UserProfile& p) {
     system("cls");
     string dailyLogFile = "user_" + p.username + "_data.txt";
     
-    cout << "\n=== Add Food to Meal ===\n";
+    printHeader("ADD FOOD TO MEAL");
     cout << "Select meal type:\n"
          << "1. Breakfast\n"
          << "2. Lunch\n"
@@ -438,8 +436,7 @@ void runAddFood(const UserProfile& p) {
 }
 
 void runViewConsumption(const UserProfile& up){
-    system("cls");
-    cout << "\n=== Today's Consumption ===\n";
+    printHeader("TODAY'S CONSUMPTION");
                 string logfile = "user_" + up.username + "_data.txt";
                 ifstream f(logfile);
                 if (!f) {
@@ -458,6 +455,5 @@ void runViewConsumption(const UserProfile& up){
                     }
                     f.close();
                 }
-                cout << "\nPress Enter to continue...";
-                cin.get();
+                pauseConsole();
 }
