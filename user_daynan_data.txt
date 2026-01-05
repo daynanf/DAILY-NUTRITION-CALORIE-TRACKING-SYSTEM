@@ -1,9 +1,0 @@
-USER_PROFILE
-Name: dinu zeynu
-Age: 21
-Gender: Male
-Height: 170
-Weight: 70
-Activity_Level: Lightly Active
-Daily_Calorie_Target: 2286
-

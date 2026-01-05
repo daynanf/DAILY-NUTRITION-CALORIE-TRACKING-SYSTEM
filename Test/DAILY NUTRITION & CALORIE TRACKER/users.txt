@@ -1,2 +1,0 @@
-dayanf|dinu12|user_dayanf_data.txt
-tt|123|user_tt_data.txt

@@ -1,9 +1,0 @@
-USER_PROFILE
-Name: dinuzeynu
-Age: 20
-Gender: Male
-Height: 180
-Weight: 70
-Activity_Level: Lightly Active
-Daily_Calorie_Target: 2379
-
