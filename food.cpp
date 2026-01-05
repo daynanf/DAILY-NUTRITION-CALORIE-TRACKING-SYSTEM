@@ -261,6 +261,7 @@ void saveToDailyLog(const string& filename, const DailyLog& entry) {
 /* -------------------- Add Custom Food -------------------- */
 
 void runAddCustomFood(const UserProfile& p) {
+    system("cls");
     FoodItem newFood;
     
     cout << "\n=== Add Custom Food ===" << endl;
@@ -331,6 +332,7 @@ void runAddCustomFood(const UserProfile& p) {
 /* -------------------- Add Food (fixed) -------------------- */
 
 void runAddFood(const UserProfile& p) {
+    system("cls");
     string dailyLogFile = "user_" + p.username + "_data.txt";
     
     cout << "\n=== Add Food to Meal ===\n";
@@ -435,82 +437,8 @@ void runAddFood(const UserProfile& p) {
          << adjustedCarbs << "g carbs, " << adjustedFat << "g fat\n";
 }
 
-// /* -------------------- Main -------------------- */
-
-// // int main() {
-//     SetConsoleOutputCP(CP_UTF8); // allow emojis on Windows
-
-//     authentication();
-
-//     // after login, load profile
-//     if (currentUsername.empty()) {
-//         cout << "No user logged in. Exiting.\n";
-//         return 0;
-//     }
-//     UserProfile up = parseUserProfile(currentUsername);
-
-//     char choice;
-//     while (true) {
-//         userDashboard();
-//         cin >> choice;
-//         cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-//         if (choice == '8') {
-//             cout << "\nLogging out...\n";
-//             break;
-//         }
-
-//         switch (choice) {
-//             case '1': {
-//                 cout << "\n=== My Profile ===\n";
-//                 cout << "Name: " << up.name << "\n";
-//                 cout << "Age: " << up.age << "\n";
-//                 cout << "Gender: " << up.gender << "\n";
-//                 cout << "Height: " << up.height << "\n";
-//                 cout << "Weight: " << up.weight << "\n";
-//                 cout << "Activity_Level: " << up.activityLevel << "\n";
-//                 cout << "Daily_Calorie_Target: " << up.dailyCalorieTarget << "\n";
-//                 cout << "\nPress Enter to continue...";
-//                 cin.get();
-//                 break;
-//             }
-//             case '2': {
-//                 cout << "\n=== Daily Nutrition Targets ===\n";
-//                 cout << "Daily Calorie Target: " << up.dailyCalorieTarget << " calories\n";
-//                 cout << "\nPress Enter to continue...";
-//                 cin.get();
-//                 break;
-//             }
-//             case '3': {
-//                 runAddFood(up);
-//                 // reload profile (in case user changed something externally)
-//                 up = parseUserProfile(currentUsername);
-//                 break;
-//             }
-//             case '4': {
-                
-//             }
-//             case '5': {
-//                 runAddCustomFood(up);
-//                 break;
-//             }
-//             case '6': {
-//                 cout << "\nMeal recommendations not implemented yet.\n";
-//                 break;
-//             }
-//             case '7': {
-//                 cout << "\nEnd of day summary not implemented yet.\n";
-//                 break;
-//             }
-//             default: {
-//                 cout << "\nInvalid choice.\n";
-//             }
-//         }
-//     }
-
-//     return 0;
-// }
 void runViewConsumption(const UserProfile& up){
+    system("cls");
     cout << "\n=== Today's Consumption ===\n";
                 string logfile = "user_" + up.username + "_data.txt";
                 ifstream f(logfile.c_str());

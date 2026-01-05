@@ -1,1 +1,2 @@
 dinu|123||user_dinu_data.txtdinuzeynu|20|Male|180|70|Lightly Active
+daynan|123||user_daynan_data.txtdinu zeynu|21|Male|170|70|Lightly Active

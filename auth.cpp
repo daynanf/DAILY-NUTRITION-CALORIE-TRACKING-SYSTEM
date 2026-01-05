@@ -10,6 +10,7 @@ using namespace std;
 
 void firstWellcomePage()
 {
+    system("cls");
 	cout << "\n"
      << "╔═══════════════════════════════════════════════════════════════════════╗\n"
      << "║ 🍏💪  WELCOME TO THE DAILY NUTRITION & CALORIE TRACKER  💪🍏 ║\n"
@@ -492,7 +493,8 @@ void registerUser(char choice)
 }
 
 bool loginUser( UserProfile& profile,char choice)
-{
+{   
+    system("cls");
 	cout << "\n--- Login ---\n";
 	    string inputUsername, inputPassword;
 	
