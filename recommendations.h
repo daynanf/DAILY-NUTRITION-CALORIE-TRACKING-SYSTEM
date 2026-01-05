@@ -7,3 +7,4 @@ void runMealRecommendations(const UserProfile& p);
 void runEndDaySummary(const UserProfile& p);
 
 #endif
+
