@@ -191,13 +191,6 @@ void updateWeightAndTargets(const std::string& filename, UserProfile& p) {
     file.seekp(0);
     writeProfileBlock(file, p);
 
-    file.seekp(0, std::ios::end);
-    time_t now = time(nullptr);
-    tm* lt = localtime(&now);
-    file << "WEIGHT_UPDATE\n";
-    file << "Date: " << (1900 + lt->tm_year) << "-" << (1 + lt->tm_mon) << "-" << lt->tm_mday << "\n";
-    file << "Weight: " << newWeight << "\n\n";
-
     file.close();
     std::cout << "Profile updated and weight history recorded.\n";
     pauseConsole();

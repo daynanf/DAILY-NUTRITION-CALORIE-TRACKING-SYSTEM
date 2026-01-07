@@ -17,59 +17,6 @@
 #include "models.h"
 using namespace std;
 
-// /* -------------------- Structs -------------------- */
-
-// // struct UserAccount {
-// //     string username;
-// //     string password;
-// //     string fullName;
-// //     int age;
-// //     string gender;
-// //     int height;
-// //     int weight;
-// //     string activityLevel;
-// // };
-
-// struct FoodItem {
-//     string name;
-//     float calories = 0;
-//     float protein = 0;
-//     float carbs = 0;
-//     float fat = 0;
-//     float servingSize = 0; // numeric grams (or ml)
-// };
-
-// struct UserProfile {
-//     string username;
-//     string name;
-//     int age = 0;
-//     string gender;
-//     float height = 0;
-//     float weight = 0;
-//     string activityLevel;
-//     float dailyCalorieTarget = 2362; // fixed default
-// };
-
-// struct DailyLog {
-//     string mealType;      // "Breakfast", "Lunch", etc.
-//     string foodName;
-//     float grams;
-//     float calories;
-//     float protein;
-//     float carbs;
-//     float fat;
-// };
-
-/* -------------------- Globals -------------------- */
-
-string currentUsername = "";
-
-/* -------------------- Helpers -------------------- */
-
-
-
-
-
 int safeStoi(const string& s, int defaultVal = -1) {
     string t = trim(s);
     if (t.empty()) return defaultVal;
@@ -317,11 +264,7 @@ void runAddCustomFood(const UserProfile& p) {
     getline(cin, choice);
     choice = trim(choice);
     if (choice == "1") {
-        // re-parse profile and call add food
         UserProfile up = parseUserProfile(p.username);
-        // call runAddFood below
-        // avoid forward reference by calling via function pointer? we have direct call below
-        // but compile-time it's fine (function declared earlier)
     }
 }
 
