@@ -1,0 +1,23 @@
+USER_PROFILE
+Name: dinu zeynu
+Age: 20
+Gender: Male
+Height: 179
+Weight: 60
+Activity_Level: Lightly Active
+Daily_Calorie_Target: 2233
+
+
+DAILY_LOG
+Date: 2026-01-08
+Type: Breakfast
+shiro wat (thick) | 1446.4 | 63.3 | 180.8 | 54.2 | 1356.0
+Type: Lunch
+tegamino shiro | 437.0 | 20.7 | 50.6 | 19.5 | 345.0
+END_DAILY_LOG
+
+DAILY_LOG
+Date: 2026-01-08
+Type: Auto-Added Recommendation
+gelatin (dry powder) | 113.9 | 28.9 | 0.0 | 0.0 | 34.0g
+END_DAILY_LOG

@@ -11,6 +11,8 @@ using namespace std;
 
 
 
+// Displays the main user dashboard menu options.
+// This function clears the screen and prints the available actions for the logged-in user.
 void userDashboardMenu()
 {
     clearScreen();
@@ -35,6 +37,12 @@ void userDashboardMenu()
          << " Enter your choice: ";
 }
 
+// Application Entry Point.
+// 1. Sets up the console environment.
+// 2. Enters the main application loop.
+// 3. Handles User Authentication (Login/Register).
+// 4. If authenticated, enters the Dashboard Loop where users can access features.
+// 5. Handles Logout to return to the main authentication screen.
 int main() {
     setupConsole();
     

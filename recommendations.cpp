@@ -40,6 +40,7 @@ struct Recommendation {
 // --- Helper Functions ---
 
 // Get current date string YYYY-MM-DD
+// Uses system time to generate a formatted date string for today.
 string getCurrentDateRecs() {
     time_t now = time(0);
     struct tm tstruct;
@@ -50,6 +51,7 @@ string getCurrentDateRecs() {
 }
 
 // Parse serving size string like "100g", "200ml", "1pc" => {value: 100, unit: "g"}
+// Helper to split a serving size string into its numeric value and unit.
 pair<double, string> parseServingSize(string s) {
     string numPart = "";
     string unitPart = "";
@@ -77,6 +79,8 @@ pair<double, string> parseServingSize(string s) {
 }
 
 // Load foods from foods.txt
+// Reads the entire food database and parses each line into a RecFoodItem.
+// Handles potential parsing errors gracefully by skipping malformed lines.
 vector<RecFoodItem> loadRecFoodDatabase() {
     vector<RecFoodItem> foods;
     ifstream file("foods.txt");
@@ -126,6 +130,7 @@ vector<RecFoodItem> loadRecFoodDatabase() {
 }
 
 // Load user's consumed totals for today
+// parses the user's data file to sum up calories and macros consumed so far today.
 NutrientStatus getConsumedToday(const string& username) {
     NutrientStatus consumed;
     string filename = "user_" + username + "_data.txt";
@@ -179,6 +184,7 @@ NutrientStatus getConsumedToday(const string& username) {
 }
 
 // Helper to save selected recommendation
+// Appends the chosen food recommendation to the user's daily log immediately.
 void autoAddFood(const string& username, const RecFoodItem& food, double amount) {
     string filename = "user_" + username + "_data.txt";
     string today = getCurrentDateRecs();
@@ -232,6 +238,13 @@ void printSummaryLine(string label, double target, double actual, string unit) {
 
 // --- Main Functions ---
 
+// Main function to run the Meal Recommendations feature.
+// 1. Calculates remaining nutrient needs for the day.
+// 2. Asks user for a goal (High Protein, High Carb, High Fat).
+// 3. Filters potential foods from the database based on that goal.
+// 4. Sorts the results to show the best options first.
+// 5. Suggests portion sizes to meet the remaining nutrient gap.
+// 6. Allows auto-adding the suggestion to the daily log.
 void runMealRecommendations(const UserProfile& p) {
     if (p.username.empty()) {
         cout << "Error: User profile not loaded correctly (missing username).\n";
@@ -384,6 +397,9 @@ void runMealRecommendations(const UserProfile& p) {
     }
 }
 
+// Displays a summary of the day's nutrition.
+// - Shows Totals vs Targets.
+// - Provides basic feedback/reflection on protein and fat intake.
 void runEndDaySummary(const UserProfile& p) {
     clearScreen();
     // 1. Calculate Totals

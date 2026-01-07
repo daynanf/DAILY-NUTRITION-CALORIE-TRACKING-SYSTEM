@@ -38,19 +38,16 @@ bool getValidUsername(string &username, char choice)
             continue;
         }
         
-        
-        // Check if first character is a letter (A-Z or a-z)
         if (!isalpha(username[0]))  
         {
             cout << "\nInvalid username! Username must start with a letter. Try again.\n";
             continue;
         }
         
-        // All other characters must be letters or digits
         bool validChars = true;
         for (char c:username)
         {
-            if (!isalnum(c)) // not letter or digit
+            if (!isalnum(c)) 
             {
                 validChars = false;
                 break;
@@ -82,12 +79,12 @@ bool getValidUsername(string &username, char choice)
         ifstream f("users.txt");
         if (!f)
         {
-            // If file does not exist:
+            
             if (choice == '1') {
-                // registering — it's fine, file will be created when appending
+                
                 break;
             } else {
-                // login — no accounts yet
+                
                 cout << "No users found (users.txt missing). Please register first.\n";
                 continue;
             }
@@ -113,26 +110,23 @@ bool getValidUsername(string &username, char choice)
             }
             f.close();
 
-            if (choice == '1' && found) continue;   // registration: can't use existing username
-            if (choice == '2' && !found) {          // login: username must exist
+            if (choice == '1' && found) continue;   
+            if (choice == '2' && !found) {          
                 cout << "Username not found. Please try again or register.\n";
                 continue;
             }
         }
-
-        // all checks passed
         return true;
     }
 
-    return true; // Should be unreachable given the while(true)
+    return true; 
 }
-
 
 // Passing the username by reference (even if not modified) is more efficient,
 // as it avoids copying the string, which can be costly if the string is long.
 bool getValidPassword(string &password, const string &username, char choice) 
 {
-    if (choice == '1') // Registration
+    if (choice == '1')  
     {
         while (true)
         {
@@ -147,11 +141,11 @@ bool getValidPassword(string &password, const string &username, char choice)
                 continue;
             }
 
-            break; // valid password
+            break;  
         }
         return true;
     }
-    else if (choice == '2') // Login
+    else if (choice == '2')     
     {
         int chances = 3;
         bool matched = false;
@@ -205,7 +199,7 @@ bool getValidPassword(string &password, const string &username, char choice)
             file.close();
 
             if (matched)
-                return true; // password correct
+                return true;    
             else
             {
                 chances--;
@@ -220,9 +214,8 @@ bool getValidPassword(string &password, const string &username, char choice)
         }
     }
 
-    return false; // Should not reach here if choice is valid
+    return false;   
 }
-
 
 bool getValidFullname(string &fullname)  
 {
@@ -233,42 +226,38 @@ bool getValidFullname(string &fullname)
 
         if (checkForBack(fullname)) return false;
 
-        // Trim whitespace
-
-        // Trim whitespace
+        
         fullname = trim(fullname);
 
-        // Check if empty
+            
         if (fullname.empty()) 
         {
             cout << "\nHey! Everyone has a name 😄. Yours can't be empty—try again!\n";
             continue; 
         }
 
-        // Limit length to avoid extremely large inputs
+        
         if (fullname.size() > 1024) {
             cout << "Name is too long. Please enter a shorter name (max 1024 chars).\n";
             continue;
         }
 
-        // Validate characters: allow letters (including UTF-8 bytes), spaces, hyphens and apostrophes.
-        // Reject digits, pipe character '|' (used as delimiter) and control characters.
+        
         bool invalid = false;
         for (unsigned char uc : fullname) {
             if (uc == '|' || uc == '\n' || uc == '\r' || uc == '\t') {
                 invalid = true; break;
             }
-            if (uc >= '0' && uc <= '9') { // reject ASCII digits
+            if (uc >= '0' && uc <= '9') { 
                 invalid = true; break;
             }
-            // allow space, hyphen, apostrophe explicitly
+            
             if (uc == ' ' || uc == '-' || uc == '\'' ) continue;
-            // allow ASCII letters
+             
             if ((uc >= 'A' && uc <= 'Z') || (uc >= 'a' && uc <= 'z')) continue;
-            // allow non-ASCII bytes (part of UTF-8 multi-byte sequences)
+
             if (uc >= 0x80) continue;
-            // anything else is invalid
-            // (this will still permit many valid Unicode letters because their bytes are >=0x80)
+             
             invalid = true; break;
         }
 
@@ -281,7 +270,6 @@ bool getValidFullname(string &fullname)
         return true;
     }
 }
-
 
 bool getValidAge(int &age)
 {
@@ -308,7 +296,7 @@ bool getValidAge(int &age)
             continue;
         }
 
-        // Clear leftover newline so subsequent getline() calls wait for user input
+       
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
         // Check age range with funny/friendly messages
@@ -331,19 +319,19 @@ bool getValidAge(int &age)
 
 // Check whether the provided age, height (cm) and weight (kg) are roughly proportional
 bool isProportional(int age, double height, double weight) {
-    if (age < 1) { // Infants (0-1 years)
+    if (age < 1) { 
         if (height < 50 || height > 150 || weight < 2 || weight > 20) {
             return false;
         }
-    } else if (age <= 12) { // Children (1-12 years)
+    } else if (age <= 12) { 
         if (height < 70.0 || height > 165.0 || weight < 5.0 || weight > 80.0) {
             return false;
         }
-    } else if (age <= 18) { // Teenagers (13-18 years)
+    } else if (age <= 18) { 
         if (height < 140.0 || height > 195.0 || weight < 40.0 || weight > 100.0) {
             return false;
         }
-    } else { // Adults (19+ years)
+    } else { 
         if (height < 140.0 || height > 280.0 || weight < 35.0 || weight > 650.0) {
             return false;
         }
@@ -361,7 +349,7 @@ bool getValidGender(string &gender)
 
         if (checkForBack(gender)) return false;
 
-        // Convert input to lowercase for simple comparison
+        
         for (char &c : gender) c = tolower(c);
         
         bool isnum=false;
@@ -375,16 +363,16 @@ bool getValidGender(string &gender)
 			}
 		}
 		
-		if(isnum) continue;  //if it gets a number in the input gender
+		if(isnum) continue;         
 
         if (gender == "m" || gender == "male") 
 		{
-            gender = "Male";  // store standardized
+            gender = "Male";  
             break;
         } 
 		else if (gender == "f" || gender == "female") 
 		{
-            gender = "Female"; // store standardized
+            gender = "Female"; 
             break;
         } 
 		else 
@@ -395,7 +383,6 @@ bool getValidGender(string &gender)
     return true;
 }
 
-// Function to safely get a valid height (in cm)
 bool getValidHeight(int &height) {
     string input;
     while (true) {
@@ -415,8 +402,6 @@ bool getValidHeight(int &height) {
             continue;
         }
 
-        // cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
         if (height < 50) {
             cout << "Hmm… that seems too short 😅. Please enter a realistic height in cm.\n";
             continue;
@@ -427,12 +412,10 @@ bool getValidHeight(int &height) {
             continue;
         }
 
-        break; // valid height
+        break; 
     }
     return true;
 }
-
-// Function to safely get a valid weight (in kg)
 bool getValidWeight( double &weight) {
     string input;
     while (true) {
@@ -452,8 +435,6 @@ bool getValidWeight( double &weight) {
             continue;
         }
 
-        // cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
         if (weight < 2) {
             cout << "Hmm… that weight is too low 😄. Enter a realistic weight.\n";
             continue;
@@ -464,7 +445,7 @@ bool getValidWeight( double &weight) {
             continue;
         }
 
-        break; // valid weight
+        break; 
     }
     return true;
 }
@@ -508,11 +489,11 @@ bool getValidActivityLevel(string &activityLevel)
         if (choice < 1 || choice > 4)
         {
             cout << "Choice out of range. Enter 1 to 4.\n";
-            // cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            
             continue;
         }
 
-        // cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        
         activityLevel = allActivityLevels[choice - 1];
         break;
     }
@@ -559,7 +540,7 @@ start_age:
 
     file << ua.username << "|"
             << ua.password
-            << "| user_" << ua.username << "_data.txt"
+            << "| user_" << ua.username << "_data.txt |"
             << ua.fullName << "|"
             << ua.age << "|"
             << ua.gender << "|"
@@ -589,13 +570,11 @@ bool loginUser( UserProfile& profile,char choice)
     cout << "Welcome back, 👤 " << inputUsername << "!\n\n";
     
     string filename = "user_" + inputUsername + "_data.txt";
-    // Ensure profile.username is set so subsequent operations use correct per-user files
     profile.username = inputUsername;
     loadProfileFromFile(filename, profile);
     cout << "👉 Press Enter to continue.....";
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
     cin.get();
-    // Clear screen and show welcome
     system("cls"); 
     return true;
 }                         
@@ -604,7 +583,7 @@ bool authentication(UserProfile& profile)
 	firstWellcomePage();
 	char choice;
     cin >> choice;
-	cin.ignore(numeric_limits<streamsize>::max(), '\n'); // clear leftover newline
+	cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
     bool isLoggedIn = false;
     while(true)
     {
@@ -615,22 +594,14 @@ bool authentication(UserProfile& profile)
                 system("cls");
 				registerUser(choice);
 				
-				// cout << "👉 Press Enter to login to your account...";
-		        // cin.ignore(numeric_limits<streamsize>::max(), '\n');
-				// cin.get();
-				// system("cls");
-				
-				// // Call loginUser with choice = '2'
-    			// loginUser('2');
-    			
-	            return false; // exit main, back to welcome screen
+	            return false; 
 	        }
 	
 		    case '2': 
 			{
 				isLoggedIn = loginUser(profile,choice);
 			
-			    return isLoggedIn;  // exits this module and goes to main
+			    return isLoggedIn;  
 			}
 
 	        case '3':
@@ -642,8 +613,7 @@ bool authentication(UserProfile& profile)
 	        default:
 	        {
         		cout << "\nInvalid choice!\n";
-        		
-        		//asking again for another value of choice and go back to the while loop
+    
         		cout << "\nEnter Your Choice: ";
 			    cin >> choice;
 			    cin.ignore(numeric_limits<streamsize>::max(), '\n');
