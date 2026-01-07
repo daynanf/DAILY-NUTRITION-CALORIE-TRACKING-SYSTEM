@@ -17,6 +17,8 @@
 #include "models.h"
 using namespace std;
 
+// Helper to safely convert a string to an integer.
+// Returns defaultVal if conversion fails or if the string contains non-numeric extra characters.
 int safeStoi(const string& s, int defaultVal = -1) {
     string t = trim(s);
     if (t.empty()) return defaultVal;
@@ -30,6 +32,8 @@ int safeStoi(const string& s, int defaultVal = -1) {
     }
 }
 
+// Helper to safely convert a string to a float.
+// Returns defaultVal if conversion fails.
 float safeStof(const string& s, float defaultVal = 0.0f) {
     string t = trim(s);
     if (t.empty()) return defaultVal;
@@ -43,6 +47,8 @@ float safeStof(const string& s, float defaultVal = 0.0f) {
     }
 }
 
+// Returns the current system date formatted as a string "YYYY-MM-DD".
+// This is used to tag daily log entries.
 string getTodayDate() {
     auto now = chrono::system_clock::now();
     time_t now_time = chrono::system_clock::to_time_t(now);
@@ -57,6 +63,8 @@ string getTodayDate() {
 
 /* -------------------- Parse profile file -------------------- */
 
+// Reads the user's specific data file (user_USERNAME_data.txt) to populate a UserProfile struct.
+// It searches for lines starting with specific keys like "Name:", "Age:", etc.
 UserProfile parseUserProfile(const string& username) {
     UserProfile profile;
     profile.username = username;
@@ -84,6 +92,8 @@ UserProfile parseUserProfile(const string& username) {
 
 /* -------------------- Food parsing & search -------------------- */
 
+// Parses a single line from the food database file.
+// Format expected: Name | Calories | Protein | Carbs | Fat | ServingSize
 FoodItem parseFoodLine(const string& line) {
     FoodItem item;
     stringstream ss(line);
@@ -122,6 +132,8 @@ FoodItem parseFoodLine(const string& line) {
     return item;
 }
 
+// Searches a given file (e.g., foods.txt or custom foods) for a food item by name.
+// Performs a case-insensitive substring match. Returns all matching items in the results vector.
 void searchInFile(const string& filename, const string& searchWord, vector<FoodItem>& results) {
     ifstream file(filename.c_str());
     if (!file) return;
@@ -144,6 +156,13 @@ void searchInFile(const string& filename, const string& searchWord, vector<FoodI
 
 /* -------------------- Daily log writer -------------------- */
 
+// Appends a food Log entry to the user's data file.
+// Logic:
+// 1. Reads the ENTIRE file into memory.
+// 2. Scans for a "DAILY_LOG" block matching today's date.
+// 3. If found, inserts the new entry inside that block.
+// 4. If not found, creates a new "DAILY_LOG" block at the end.
+// 5. Overwrites the file with the updated content.
 void saveToDailyLog(const string& filename, const DailyLog& entry) {
     // Read current file lines
     vector<string> lines;
@@ -158,6 +177,7 @@ void saveToDailyLog(const string& filename, const DailyLog& entry) {
     bool inDailyLog = false;
     int currentStart = -1;
     int todayStart = -1, todayEnd = -1;
+    // Iterate through lines to find the relevant section
     for (int i = 0; i < (int)lines.size(); ++i) {
         string t = trim(lines[i]);
         if (t == "DAILY_LOG") { inDailyLog = true; currentStart = i; }
@@ -188,7 +208,7 @@ void saveToDailyLog(const string& filename, const DailyLog& entry) {
     newEntries.push_back(fs.str());
 
     if (todayEnd != -1) {
-        // insert before END_DAILY_LOG
+        // insert before END_DAILY_LOG to keep it inside the block
         lines.insert(lines.begin() + todayEnd, newEntries.begin(), newEntries.end());
     } else {
         if (!lines.empty()) lines.push_back("");
@@ -205,6 +225,9 @@ void saveToDailyLog(const string& filename, const DailyLog& entry) {
 
 /* -------------------- Add Custom Food -------------------- */
 
+// Prompts the user to define a new custom food item.
+// The new item is appended to "user_USERNAME_custom_foods.txt" for future use.
+// It optionally asks the user if they want to immediately add this food to a meal (though the logic is currently just a placeholder).
 void runAddCustomFood(const UserProfile& p) {
     printHeader("ADD CUSTOM FOOD");
     FoodItem newFood;
@@ -270,6 +293,13 @@ void runAddCustomFood(const UserProfile& p) {
 
 /* -------------------- Add Food (fixed) -------------------- */
 
+// Primary function to log a food entry.
+// Steps:
+// 1. Select meal type (Breakfast, Lunch, etc.)
+// 2. Search for food in both the main database and user's custom database.
+// 3. Select a matching item.
+// 4. Input grams consumed.
+// 5. Calculate nutritional values proportional to the consumed amount relative to the reference serving size.
 void runAddFood(const UserProfile& p) {
     system("cls");
     string dailyLogFile = "user_" + p.username + "_data.txt";
@@ -346,6 +376,8 @@ void runAddFood(const UserProfile& p) {
         grams = g; break;
     }
 
+    // Calulate ratio: (Grams Consumed) / (Reference Serving Size)
+    // Example: If serving is 100g and user eats 200g, ratio is 2.0.
     float ratio = 1.0f;
     if (selected.servingSize > 0.0f) ratio = grams / selected.servingSize;
     else {
@@ -376,6 +408,8 @@ void runAddFood(const UserProfile& p) {
          << adjustedCarbs << "g carbs, " << adjustedFat << "g fat\n";
 }
 
+// Displays the food consumption log for the current user.
+// Reads the user_USERNAME_data.txt file and prints relevant lines (DAILY_LOG entries).
 void runViewConsumption(const UserProfile& up){
     printHeader("TODAY'S CONSUMPTION");
                 string logfile = "user_" + up.username + "_data.txt";

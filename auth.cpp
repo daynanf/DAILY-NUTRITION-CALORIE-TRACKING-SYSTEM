@@ -13,12 +13,12 @@ void firstWellcomePage()
     system("cls");
 	cout << "\n"
      << "╔═══════════════════════════════════════════════════════════════════════╗\n"
-     << "║ 🍏💪  WELCOME TO THE DAILY NUTRITION & CALORIE TRACKER  💪🍏        ║\n"
+     << "║        WELCOME TO THE DAILY NUTRITION & CALORIE TRACKER               ║\n"
      << "╚═══════════════════════════════════════════════════════════════════════╝\n\n"
-     << " 🆕  1. Register New User\n"
-     << " 🔑  2. Login\n"
-     << " ❌  3. Exit\n\n"
-     << " ✨  Please Enter Your Choice: ";
+     << "   1. Register New User\n"
+     << "   2. Login\n"
+     << "   3. Exit\n\n"
+     << "   Please Enter Your Choice: ";
 }
 
 // getValidUsername: for choice == '1' (register) ensure username NOT present.
@@ -572,7 +572,7 @@ start_age:
 
         createUserDataFile(filename, ua);
         cout << "\n--------------------------------------------\n"
-             << " 🎉✅ Profile created successfully! 👤 \n"
+             << "    Profile created successfully!   \n"
              << "--------------------------------------------\n\n";
 }
 
