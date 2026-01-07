@@ -29,7 +29,8 @@ void userDashboardMenu()
          << "║ 5️⃣  Add Custom Food                        🥘                              ║\n"
          << "║ 6️⃣  Get Meal Recommendations               🍱                              ║\n"
          << "║ 7️⃣  End Day & View Summary                 📅                              ║\n"
-         << "║ 8️⃣  Logout                                 🚪                              ║\n"
+         << "║ 8️⃣  Update Weight & Recalculate Targets    ⚖️                              ║\n"
+         << "║ 9️⃣  Logout                                 🚪                              ║\n"
          << "╚═════════════════════════════════════════════════════════════════════════════╝\n\n"
          << " Enter your choice: ";
 }
@@ -76,7 +77,12 @@ int main() {
                     case '7':
                         runEndDaySummary(currentUser);
                         break;
-                    case '8':
+                    case '8': {
+                        string filename = "user_" + currentUser.username + "_data.txt";
+                        updateWeightAndTargets(filename, currentUser);
+                        break;
+                    }
+                    case '9':
                         loggedIn = false;
                         cout << "Logging out...\n";
                         system("cls");

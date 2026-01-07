@@ -3,7 +3,11 @@ Name: dinu zeynu
 Age: 20
 Gender: Male
 Height: 179
-Weight: 62
+Weight: 67
 Activity_Level: Lightly Active
-Daily_Calorie_Target: 2260
+Daily_Calorie_Target: 2329
+
+WEIGHT_UPDATE
+Date: 2026-1-7
+Weight: 67
 
