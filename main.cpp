@@ -8,9 +8,6 @@
 
 using namespace std;
 
-
-
-
 // Displays the main user dashboard menu options.
 // This function clears the screen and prints the available actions for the logged-in user.
 void userDashboardMenu()
@@ -57,50 +54,61 @@ int main() {
             // Dashboard Loop
             while(true) {
                 userDashboardMenu();
-                char dashChoice;
+                int dashChoice = 0;
                 cin >> dashChoice;
+                
+                // Handle invalid input (non-numeric, out of range, etc.)
+                if (cin.fail() || dashChoice < 1 || dashChoice > 9) {
+                    cin.clear(); 
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+                    cout << "Invalid Option! Please enter a number from 1-9.\n";
+                    pauseConsole();
+                    continue; 
+                }
+                
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 
                 switch(dashChoice) {
-                    case '1':
+                    case 1:
                         printHeader("MY PROFILE");
                         displayProfile(currentUser);
                         break;
-                    case '2':
+                    case 2:
                         printHeader("DAILY TARGETS");
                         displayNutritionTargets(currentUser);
                         break;
-                    case '3':
+                    case 3:
                         runAddFood(currentUser);
                         break;
-                    case '4':
+                    case 4:
                         runViewConsumption(currentUser);
                         break;
-                    case '5':
+                    case 5:
                         runAddCustomFood(currentUser);
                         break;
-                    case '6':
+                    case 6:
                         runMealRecommendations(currentUser);
                         break;
-                    case '7':
+                    case 7:
                         runEndDaySummary(currentUser);
                         break;
-                    case '8': {
+                    case 8: {
                         string filename = "user_" + currentUser.username + "_data.txt";
                         updateWeightAndTargets(filename, currentUser);
                         break;
                     }
-                    case '9':
+                    case 9:
                         loggedIn = false;
                         cout << "Logging out...\n";
-                        system("cls");
+                        clearScreen();
                         break;
                     default:
                         cout << "Invalid Option!\n";
                         pauseConsole();
+                
                 }
                 
-                if (!loggedIn) break; // Break dashboard loop, back to main
+                if (!loggedIn) break;
             }
         }
     }
