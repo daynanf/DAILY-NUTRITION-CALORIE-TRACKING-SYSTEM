@@ -10,7 +10,7 @@ using namespace std;
 
 void firstWellcomePage()
 {
-    system("cls");
+    clearScreen();
 	cout << "\n"
      << "╔═══════════════════════════════════════════════════════════════════════╗\n"
      << "║        WELCOME TO THE DAILY NUTRITION & CALORIE TRACKER               ║\n"
@@ -29,7 +29,7 @@ bool getValidUsername(string &username, char choice)
     {
         cout << "\nEnter Username (or 'b' to back): ";
         getline(cin, username);
-
+        
         if (checkForBack(username)) return false;
 
         if (username.empty()) 
@@ -47,7 +47,7 @@ bool getValidUsername(string &username, char choice)
         bool validChars = true;
         for (char c:username)
         {
-            if (!isalnum(c)) 
+            if (!isalnum(static_cast<unsigned char>(c))) 
             {
                 validChars = false;
                 break;
@@ -122,8 +122,7 @@ bool getValidUsername(string &username, char choice)
     return true; 
 }
 
-// Passing the username by reference (even if not modified) is more efficient,
-// as it avoids copying the string, which can be costly if the string is long.
+
 bool getValidPassword(string &password, const string &username, char choice) 
 {
     if (choice == '1')  
@@ -167,7 +166,7 @@ bool getValidPassword(string &password, const string &username, char choice)
             if (!file)
             {
                 cout << "Error: Could not open users file.\n";
-                exit(1);
+                return false;
             }
 
             string line;
@@ -196,8 +195,6 @@ bool getValidPassword(string &password, const string &username, char choice)
 
             file.close();
 
-            file.close();
-
             if (matched)
                 return true;    
             else
@@ -208,7 +205,7 @@ bool getValidPassword(string &password, const string &username, char choice)
                 else
                 {
                     cout << "😒 Sorry, you have run out of chances. Try some other time.\n";
-                    exit(0);
+                    return false; 
                 }
             }
         }
@@ -237,7 +234,7 @@ bool getValidFullname(string &fullname)
         }
 
         
-        if (fullname.size() > 1024) {
+        if (fullname.size() > 255) {
             cout << "Name is too long. Please enter a shorter name (max 1024 chars).\n";
             continue;
         }
@@ -512,7 +509,7 @@ void registerUser(char choice)
     if (!getValidFullname(ua.fullName)) return;
 
     // Loop label for re-entering age/height/weight when proportions are invalid
-start_age:
+    start_age:
     if (!getValidAge(ua.age)) return;
 
     if (!getValidGender(ua.gender)) return;
@@ -540,7 +537,7 @@ start_age:
 
     file << ua.username << "|"
             << ua.password
-            << "| user_" << ua.username << "_data.txt |"
+            << "|user_" << ua.username << "_data.txt|"
             << ua.fullName << "|"
             << ua.age << "|"
             << ua.gender << "|"
@@ -559,7 +556,7 @@ start_age:
 
 bool loginUser( UserProfile& profile,char choice)
 {   
-    system("cls");
+    clearScreen();
     printHeader("LOGIN");
     string inputUsername, inputPassword;
 
@@ -575,7 +572,7 @@ bool loginUser( UserProfile& profile,char choice)
     cout << "👉 Press Enter to continue.....";
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
     cin.get();
-    system("cls"); 
+    clearScreen(); 
     return true;
 }                         
 bool authentication(UserProfile& profile)
@@ -591,7 +588,7 @@ bool authentication(UserProfile& profile)
 		{
 	        case '1': 
 			{
-                system("cls");
+                clearScreen();
 				registerUser(choice);
 				
 	            return false; 
